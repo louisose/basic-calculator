@@ -147,8 +147,8 @@ int areaofrectangle()
 int perimeterofrectangle()
 {
     system("cls");
-     int x;
-     int y;
+     double x;
+     double y;
      std::cout<<"Hello And Welcome."<<std::endl;
      std::cout<<"Please Enter the Length of the Rectangle"<<std::endl;
      std::cin>>x;
