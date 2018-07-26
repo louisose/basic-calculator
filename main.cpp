@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cstdlib>
+#include <math.h>
 
 void mainmenu();
 void squares();
@@ -7,6 +8,7 @@ void rectangles();
 void circles();
 void cones();
 void pyramid();
+double pi = 3.14159265359;
 
 
 int main()
@@ -61,6 +63,8 @@ void mainmenu()
 
 int areaofsquare();
 int perimeterofsquare();
+int areaofrectangle();
+int perimeterofrectangle();
 
 void squares()
 {
@@ -85,18 +89,20 @@ void squares()
 }
 int areaofsquare()
 {
-	int x;
+	double x;
 	std::cout<<"Please Enter The Lenght Of One Side"<<std::endl;
 	std::cin>>x;
+    std::cout<<"The Length Of The Side Is"<<x<<" Units."<<std::endl;
 	std::cout<<"The Area Of The Square is"<<x*x<<"units squared"<<std::endl;
 	system("Pause");
 	return 0;
 }
 int perimeterofsquare()
 {
-	int x;
+	double x;
 	std::cout<<"Please Enter The Lenght Of One Side"<<std::endl;
 	std::cin>>x;
+    std::cout<<"The Length Of The Side Is"<<x<<" Units."<<std::endl;
 	std::cout<<"The Perimeter Of The Square is"<<x+x+x+x<<"units"<<std::endl;
 	system("Pause");
 	return 0;
@@ -104,7 +110,7 @@ int perimeterofsquare()
 void rectangles()
 {
     system("cls");
-     std::cout<<"Hello And Welcome."<<std::endl;
+    std::cout<<"Hello And Welcome."<<std::endl;
 	std::cout<<"What Would You Love To Find"<<std::endl;
 	std::cout<<"1	The Area Of A Rectangle			  "<<std::endl;
 	std::cout<<"2	The Perimeter Of A Rectangle "<<std::endl;
@@ -113,20 +119,96 @@ void rectangles()
 	std::cin>>choice;
 	switch(choice)
 	{
-		case 1:	areaofsquare();
+		case 1:	areaofrectangle();
 									break;
-		case 2:   perimeterofsquare();
+		case 2:  perimeterofrectangle();
 									break;
 		default: std::cout<<"ERROR!"<<std::endl;
 									break;
 	}
     system("Pause");
 }
+int areaofrectangle()
+{
+     system("cls");
+     double x;
+     double y;
+     std::cout<<"Hello And Welcome."<<std::endl;
+     std::cout<<"Please Enter the Length of the Rectangle"<<std::endl;
+     std::cin>>x;
+     std::cout<<"The length Of The Rectangle Is "<<x<<" Units."<<std::endl;
+     std::cout<<"Please Enter the Width of the Rectangle"<<std::endl;
+     std::cin>>y;
+     std::cout<<"The Widdth Of The Rectangle Is "<<y<<" Units."<<std::endl;
+     std::cout<<"The Area Of The Rectangle Is "<< x*y<<" Units "<<std::endl;
+    system("Pause");
+    return 0;
+}
+int perimeterofrectangle()
+{
+    system("cls");
+     int x;
+     int y;
+     std::cout<<"Hello And Welcome."<<std::endl;
+     std::cout<<"Please Enter the Length of the Rectangle"<<std::endl;
+     std::cin>>x;
+     std::cout<<"The length Of The Rectangle Is "<<x<<" Units."<<std::endl;
+     std::cout<<"Please Enter the Width of the Rectangle"<<std::endl;
+     std::cin>>y;
+     std::cout<<"The Width Of The Rectangle Is "<<y<<" Units."<<std::endl;
+     std::cout<<"The Perimeter Of The Rectangle Is "<< 2*(x+y) <<" Units "<<std::endl;
+    system("Pause");
+    return 0;
+}
+int areaofcircles();
+int circumferenceofcircles();
+
 void circles()
 {
     system("cls");
-     std::cout<<"Hello And Welcome."<<std::endl;
+    std::cout<<"Hello And Welcome."<<std::endl;
+    std::cout<<"What Would You Love To Find"<<std::endl;
+    std::cout<<"1   The Area Of A Circle           "<<std::endl;
+    std::cout<<"2   The Circumference Of A Circle  "<<std::endl;
     system("Pause");
+    int choice;
+    std::cin>>choice;
+    switch(choice)
+    {
+        case 1: areaofcircles();
+                                    break;
+        case 2:  circumferenceofcircles();
+                                    break;
+        default: std::cout<<"ERROR!"<<std::endl;
+                                    break;
+    }
+    system("Pause");
+}
+int areaofcircles()
+{
+    system("cls");
+    double r;
+    std::cout<<"Hello And Welcome."<<std::endl;
+    std::cout<<"Please Enter The Raduis of The Circle."<<std::endl;
+    std::cin>> r;
+    std::cout<<"The Raduis Of The Circle Is: "<<r<<" Units."<<std::endl;
+    std::cout<<"The Area Of The Circle Is "<< (r*r)*pi <<" unists squared."<<std::endl;
+
+    system("pause");
+    return 0;
+}
+int circumferenceofcircles()
+{
+    system("cls");
+    double r;
+    std::cout<<"Hello And Welcome"<<std::endl;
+    std::cout<<"Please Enter The Raduis of The Circle."<<std::endl;
+    std::cin>> r;
+    std::cout<<"The Raduis Of The Circle Is: "<<r<<" Units."<<std::endl;
+    std::cout<<"And The Diameter Of The Circle Is: "<<2*r<<" Units."<<std::endl;
+    std::cout<<"The Circumference Of The Circle is "<< 2*r*pi<<" Units"<<std::endl;
+    system("pause");
+    return 0;
 }
 void cones()
 {
