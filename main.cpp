@@ -2,7 +2,7 @@
 #include <cstdlib>
 #include <math.h>
 
-void mainmenu();
+int mainmenu();
 void squares();
 void rectangles();
 void circles();
@@ -26,9 +26,11 @@ int main()
     return 0;
 }
 
-void mainmenu()
+int mainmenu()
 {
     system("cls");
+    int option;
+    do{
     std::cout<<"*****MAIN MENU*****"<<std::endl;
     std::cout<<"What Would You Love To  Work On Today?"<<std::endl;
     std::cout<<"Please Choose An Option"<<std::endl;
@@ -37,7 +39,6 @@ void mainmenu()
     std::cout<<"3   Circles     "<<std::endl;
     std::cout<<"4   Cones       "<<std::endl;
     std::cout<<"5   Pyramids    "<<std::endl;
-    int option;
     std::cin>>option;
     system("Pause");
 
@@ -53,12 +54,13 @@ void mainmenu()
                 break;
       case 5: pyramid();
                 break;
-      case 6: main();
-                break;
-
+      
       default: std::cout<<"ERROR!!! YOU PICKED AN INVALID OPTION. TRY AGAIN"<<std::endl;
     }
+    }while(option!=6);
+   
     system("pause");
+    return 0;
 }
 
 int areaofsquare();
@@ -214,11 +216,41 @@ void cones()
 {
     system("cls");
      std::cout<<"Hello And Welcome."<<std::endl;
+     std::cout<<"What Would You Love To Find"<<std::endl;
+    std::cout<<"1   The Surface Area Of A Cone   "<<std::endl;
+    std::cout<<"2   The Volume Of A Cone         "<<std::endl;
+    system("Pause");
+    int choice;
+    std::cin>>choice;
+    switch(choice)
+    {
+        case 1: areaofcircles();
+                                    break;
+        case 2:  circumferenceofcircles();
+                                    break;
+        default: std::cout<<"ERROR!"<<std::endl;
+                                    break;
+    }
     system("Pause");
 }
 void pyramid()
 {
     system("cls");
      std::cout<<"Hello And Welcome."<<std::endl;
+     std::cout<<"What Would You Love To Find"<<std::endl;
+    std::cout<<"1   The Surface Area Of A Pyramid      "<<std::endl;
+    std::cout<<"2   The Volume Of A Pyramid            "<<std::endl;
+    system("Pause");
+    int choice;
+    std::cin>>choice;
+    switch(choice)
+    {
+        case 1: areaofcircles();
+                                    break;
+        case 2:  circumferenceofcircles();
+                                    break;
+        default: std::cout<<"ERROR!"<<std::endl;
+                                    break;
+    }
     system("Pause");
 }
