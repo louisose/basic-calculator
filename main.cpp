@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <math.h>
+#include <Classes.h>
 
 int mainmenu();
 void squares();
