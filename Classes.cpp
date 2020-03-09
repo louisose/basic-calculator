@@ -67,3 +67,43 @@ double Rectangle::perimeterOfRectangle()
 {
 	return ((2 * this->lenght) + (2 * this->width));
 }
+
+
+Circle::Circle() {
+	this->radius = 1.0;
+	this->diameter = this->radius * 2;
+}
+
+ Circle::Circle(double radius) {
+	this->radius = radius;
+	this->diameter = this->radius * 2;
+}
+
+Circle::Circle(double diameter) {
+	this->diameter = diameter;
+	this->radius = this->diameter / 2;
+}
+
+double Circle::getRadius() {
+	return this->radius;
+}
+
+double Circle::setRadius(double radius) {
+	this->radius = radius;
+}
+
+double Circle::getDiameter() {
+	return this->diameter;
+}
+
+double Circle::setDiameter(double diameter) {
+	this->diameter = diameter;
+}
+
+double Circle::areaOfCircle() {
+	return (pi * (pow(this->radius, 2)));
+}
+
+double Circle::circimfrenceOfCircle() {
+	return (pi * this->diameter);
+}

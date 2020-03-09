@@ -1,0 +1,4 @@
+0000000000000000000000000000000000000000 27fdb309aed98433aec7b103774542bd5ef9c15a losez069uottawa.ca <losez069@uottawa.ca> 1579815346 -0500	clone: from https://github.com/louisose/basic-calculator.git
+27fdb309aed98433aec7b103774542bd5ef9c15a 3c7430dc01208bd9438ca12900d4e2c1e8193463 losez069uottawa.ca <losez069@uottawa.ca> 1582053217 -0500	commit: Changing the basic structure of the program
+3c7430dc01208bd9438ca12900d4e2c1e8193463 fe498c283eb36d00ec2b397a6c770b3f216bb977 losez069uottawa.ca <losez069@uottawa.ca> 1582212244 -0500	commit: changing the overal look and feel of the program
+fe498c283eb36d00ec2b397a6c770b3f216bb977 89d1754face4957b78c0640e331c0a983e632791 losez069uottawa.ca <losez069@uottawa.ca> 1582212508 -0500	commit (merge): need this to ge through

@@ -1,4 +1,5 @@
 #pragma once
+#include <math.h>
 
 double pi = 3.14159265359;
 
@@ -29,18 +30,34 @@ public:
 	double perimeterOfRectangle();
 };
 
-class Cone {
+class Circle{
+private:
+	double radius;
+	double diameter;
+public:
+	Circle();
+	Circle(double radius);
+	Circle(double diameter);
+	double getRadius();
+	double getDiameter();
+	double setRadius(double radius);
+	double setDiameter(double diameter);
+	double areaOfCircle();
+	double circimfrenceOfCircle();
+};
 
+class Triangle {
+
+};
+
+class Cone {
+private:
+	double radius;
+public:
+	double getRadius();
 };
 
 class Pyramid {
 
 };
 
-class Circle {
-
-};
-
-class Triangle {
-
-};
