@@ -47,7 +47,20 @@ public:
 };
 
 class Triangle {
-
+private:
+	double base;
+	double height;
+public:
+	Triangle();
+	Triangle(double base);
+	Triangle(double height);
+	Triangle(double base, double height);
+	double getBase();
+	double getHeight();
+	double setBase(double base);
+	double setHeight(double height);
+	double areaOfTriangle();
+	double perimeterOfTriangle();
 };
 
 class Cone {

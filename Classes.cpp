@@ -107,3 +107,4 @@ double Circle::areaOfCircle() {
 double Circle::circimfrenceOfCircle() {
 	return (pi * this->diameter);
 }
+

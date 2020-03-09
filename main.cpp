@@ -15,7 +15,6 @@ void rectangles();
 void circles();
 void cones();
 void pyramid();
-double pi = 3.14159265359;
 
 
 int main()
