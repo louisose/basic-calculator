@@ -67,7 +67,7 @@ class Cone {
 private:
 	double radius;
 	double height;
-	double slantheight;
+	//double slantheight;
 public:
 	Cone();
 	Cone(double radius);

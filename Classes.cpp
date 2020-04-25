@@ -155,25 +155,25 @@ double Triangle::areaOfTriangle() {
 Cone::Cone(){
 	this->radius = 1.0;
 	this->radius = 1.0;
-	this->slantheight = this->getSlantHeight();
+	//this->slantheight = this->getSlantHeight();
 }
 
 Cone::Cone(double radius){
 	this->radius = radius;
 	this->height = 1.0;
-	this->slantheight = this->getSlantHeight();
+	//this->slantheight = this->getSlantHeight();
 }
 
 Cone::Cone(double height){
 	this->height = height;
 	this->radius = 1.0;
-	this->slantheight = this->getSlantHeight();
+	//this->slantheight = this->getSlantHeight();
 }
 
 Cone::Cone(double radius, double height){
 	this->radius = radius;
 	this->height = height;
-	this->slantheight = this->getSlantHeight();
+	//this->slantheight = this->getSlantHeight();
 }
 
 double Cone::getRadius(){
@@ -201,5 +201,5 @@ double Cone::getVolume(){
 }
 
 double Cone::getSurfaceArea(){
-
+	return (pi*this->radius*this->getSlantHeight());
 }
