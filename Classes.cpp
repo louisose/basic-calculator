@@ -88,7 +88,7 @@ double Circle::getRadius() {
 	return this->radius;
 }
 
-double Circle::setRadius(double radius) {
+void Circle::setRadius(double radius) {
 	this->radius = radius;
 }
 
@@ -96,7 +96,7 @@ double Circle::getDiameter() {
 	return this->diameter;
 }
 
-double Circle::setDiameter(double diameter) {
+void Circle::setDiameter(double diameter) {
 	this->diameter = diameter;
 }
 
@@ -108,3 +108,46 @@ double Circle::circimfrenceOfCircle() {
 	return (pi * this->diameter);
 }
 
+Triangle::Triangle() {
+	this->base = 1.0;
+	this->height = 1.0;
+}
+
+Triangle::Triangle(double base) {
+	this->base = base;
+	this->height = 1.0;
+}
+
+Triangle::Triangle(double height) {
+	this->height = height;
+	this->base = 1.0;
+}
+
+Triangle::Triangle(double base, double height) {
+	this->base = base;
+	this->height = height;
+}
+
+double Triangle::getBase() {
+	return this->base;
+}
+
+double Triangle::getHeight() {
+	return this->height;
+}
+
+void Triangle::setBase(double base) {
+	this->base = base;
+}
+
+void Triangle::setHeight(double height) {
+	this->height = height;
+}
+
+double Triangle::areaOfTriangle() {
+	return (this->base * this->height) * 0.5;
+}
+
+double Triangle::perimeterOfTriangle() {
+
+}

@@ -40,8 +40,8 @@ public:
 	Circle(double diameter);
 	double getRadius();
 	double getDiameter();
-	double setRadius(double radius);
-	double setDiameter(double diameter);
+	void setRadius(double radius);
+	void setDiameter(double diameter);
 	double areaOfCircle();
 	double circimfrenceOfCircle();
 };
@@ -57,8 +57,8 @@ public:
 	Triangle(double base, double height);
 	double getBase();
 	double getHeight();
-	double setBase(double base);
-	double setHeight(double height);
+	void setBase(double base);
+	void setHeight(double height);
 	double areaOfTriangle();
 	double perimeterOfTriangle();
 };
