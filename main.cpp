@@ -1,13 +1,10 @@
 #include <iostream>
 #include <cstdlib>
 #include <math.h>
-<<<<<<< HEAD
 #include <Classes.h>
-=======
 #include <String>
 #include <Array>
 #include <vector>
->>>>>>> 76d9c8182e1bd4222907e2bbf69ae4d00744e3dd
 
 int mainmenu();
 void squares();

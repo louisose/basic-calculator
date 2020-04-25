@@ -66,8 +66,20 @@ public:
 class Cone {
 private:
 	double radius;
+	double height;
+	double slantheight;
 public:
+	Cone();
+	Cone(double radius);
+	Cone(double height);
+	Cone(double radius, double height);
 	double getRadius();
+	double getHeight();
+	double getSlantHeight();
+	void setRadius(double radius);
+	void setHeight(double height);
+	double getSurfaceArea();
+	double getVolume();
 };
 
 class Pyramid {

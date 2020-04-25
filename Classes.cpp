@@ -148,6 +148,58 @@ double Triangle::areaOfTriangle() {
 	return (this->base * this->height) * 0.5;
 }
 
-double Triangle::perimeterOfTriangle() {
+/*double Triangle::perimeterOfTriangle() {
+
+}*/
+
+Cone::Cone(){
+	this->radius = 1.0;
+	this->radius = 1.0;
+	this->slantheight = this->getSlantHeight();
+}
+
+Cone::Cone(double radius){
+	this->radius = radius;
+	this->height = 1.0;
+	this->slantheight = this->getSlantHeight();
+}
+
+Cone::Cone(double height){
+	this->height = height;
+	this->radius = 1.0;
+	this->slantheight = this->getSlantHeight();
+}
+
+Cone::Cone(double radius, double height){
+	this->radius = radius;
+	this->height = height;
+	this->slantheight = this->getSlantHeight();
+}
+
+double Cone::getRadius(){
+	return this->radius;
+}
+
+double Cone::getHeight(){
+	return this->height;
+}
+
+double Cone::getSlantHeight(){
+	return sqrt((pow(this->radius, 2.0) + pow(this->height, 2.0)));
+}
+
+void Cone::setRadius(double radius){
+	this->radius = radius;
+}
+
+void Cone::setHeight(double height){
+	this->height = height;
+}
+
+double Cone::getVolume(){
+	return ( (pi*pow(this->radius,2.0)* this->height)/3);
+}
+
+double Cone::getSurfaceArea(){
 
 }
