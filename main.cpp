@@ -1,259 +1,146 @@
 #include <iostream>
-#include <cstdlib>
 #include <math.h>
-#include <Classes.h>
-#include <String>
-#include <Array>
+//#include <Array>
+#include <string>
 #include <vector>
+#include <cstdlib>
+//#include "objects.h"
+#include "classes.cpp"
 
-int mainmenu();
-void squares();
-void rectangles();
-void circles();
-void cones();
-void pyramid();
+//double pi = 3.141592653589793238462;
 
+void mainMenu();
+void shapes();
+void functions();
 
-int main()
+/*class Square
 {
-    system("cls");
-    std::cout<< "Hello And Welcome To The Basic Calculator."<<std::endl;
-    std::cout<<"It Can Be Used For Simple Calculations."<<std::endl;
-    std::cout<<"So Without Further Talk, Let et Started."<<std::endl;
-    system("Pause");
-    mainmenu();
-    system("cls");
-    std::cout<<"Thank You And I Hope I Was Helpful.\n";
-    std::cout<<"And Until Next Time. See You."<<std::endl;
-    system("Pause");
+private:
+    double side_lenght;
+
+public:
+    Square();
+    Square(double side_lenght);
+    double area();
+    double perimeter();
+    double getSide_Lenght();
+    void setSide_Lenght(double sdie_lenght);
+    ~Square();
+};
+
+Square::Square(){
+    this->side_lenght = 1.0;
+}
+
+Square::Square(double side_lenght){
+    this->side_lenght = side_lenght;
+}
+
+void Square::setSide_Lenght(double side_lenght){
+    this->side_lenght = side_lenght;
+}
+
+double Square::area(){
+    return pow(this->side_lenght, 2);
+}
+
+double Square::perimeter(){
+    return (4 * this->side_lenght);
+}
+
+double Square::getSide_Lenght(){
+    return this->side_lenght;
+}*/
+
+/*class Rectangle{
+private:
+    double width;
+    double heigth;
+public:
+    Rectangle();
+    //Rectangle(double width);
+    //Rectangle(double heigth);
+    Rectangle(double width, double heigth);
+    double getArea();
+    double getPerimeter();
+    double getWidth();
+    double getHeigth();
+    void setWidth(double width);
+    void setHeigth(double heigth);
+    ~Rectangle();
+};*/
+
+/*Rectangle::Rectangle(){
+    this->width = 1.0;
+    this->heigth = 1.0;
+}*/
+
+/*Rectangle::Rectangle(double width){
+    this->width = width;
+    this->heigth = 1.0;
+}*/
+
+/*Rectangle::Rectangle(double heigth){
+    this->heigth = heigth;
+    this->width = 1.0;
+}*/
+
+/*Rectangle::Rectangle(double width, double heigth){
+    this->width = width;
+    this->heigth = heigth;
+}
+
+double Rectangle::getArea(){
+    return (this->width * this->heigth);
+}
+double Rectangle::getPerimeter(){
+    return ((2*this->width) + (2*this->heigth));
+}
+double Rectangle::getWidth(){
+    return this->width;
+}
+double Rectangle::getHeigth(){
+    return this->heigth;
+}
+void Rectangle::setWidth(double width){
+    this->width = width;
+}
+void Rectangle::setHeigth(double heigth){
+    this->heigth = heigth;
+}*/
+
+int main(){
+    mainMenu();
+    system("pause");
     return 0;
 }
 
-int mainmenu()
-{
-    system("cls");
+void mainMenu(){
     int option;
-    do{
-    std::cout<<"*****MAIN MENU*****"<<std::endl;
-    std::cout<<"What Would You Love To  Work On Today?"<<std::endl;
-    std::cout<<"Please Choose An Option"<<std::endl;
-    std::cout<<"1   Squares     "<<std::endl;
-    std::cout<<"2   Rectangles  "<<std::endl;
-    std::cout<<"3   Circles     "<<std::endl;
-    std::cout<<"4   Cones       "<<std::endl;
-    std::cout<<"5   Pyramids    "<<std::endl;
+    std::cout<<"MAIN MENU"<<std::endl;
+    std::cout<<"Welcome to the Calculator. This calculator allows you to carry out calcuilations for different shapes."<<std::endl;
+    std::cout<<"Please choose of the following options. If what you want to do is not available at this time, please let us know and we would add it to the list of functions."<<std::endl;
+    std::cout<<"1 "<<"Shapes   "<<std::endl;
+    std::cout<<"2 "<<"Functions"<<std::endl;
     std::cin>>option;
-    system("Pause");
-
-     switch (option)
+    switch (option)
     {
-      case 1: squares();
-                break;
-      case 2: rectangles();
-                break;
-      case 3: circles();
-                break;
-      case 4: cones();
-                break;
-      case 5: pyramid();
-                break;
-      
-      default: std::cout<<"ERROR!!! YOU PICKED AN INVALID OPTION. TRY AGAIN"<<std::endl;
+    case 1:
+        shapes();
+        break;
+    case 2:
+        functions();
+    default:
+        std::cout<<"Sorry, yo u have entered an INVALID option. Please try again"<<std::endl;
+        mainMenu();
+        break;
     }
-    }while(option!=6);
-   
-    system("pause");
-    return 0;
 }
 
-int areaofsquare();
-int perimeterofsquare();
-int areaofrectangle();
-int perimeterofrectangle();
+void shapes(){
 
-void squares()
-{
-    system("cls");
-    std::cout<<"Hello And Welcome."<<std::endl;
-	std::cout<<"What Would You Love To Find"<<std::endl;
-	std::cout<<"1	The Area Of A Square			 "<<std::endl;
-	std::cout<<"2	The Perimeter Of A Square "<<std::endl;
-    system("Pause");
-	int choice;
-	std::cin>>choice;
-	switch(choice)
-	{
-		case 1:	areaofsquare();
-									break;
-		case 2:   perimeterofsquare();
-									break;
-		default: std::cout<<"ERROR!"<<std::endl;
-									break;
-	}
-	system("Pause");
 }
-int areaofsquare()
-{
-	double x;
-	std::cout<<"Please Enter The Lenght Of One Side"<<std::endl;
-	std::cin>>x;
-    std::cout<<"The Length Of The Side Is"<<x<<" Units."<<std::endl;
-	std::cout<<"The Area Of The Square is"<<x*x<<"units squared"<<std::endl;
-	system("Pause");
-	return 0;
-}
-int perimeterofsquare()
-{
-	double x;
-	std::cout<<"Please Enter The Lenght Of One Side"<<std::endl;
-	std::cin>>x;
-    std::cout<<"The Length Of The Side Is"<<x<<" Units."<<std::endl;
-	std::cout<<"The Perimeter Of The Square is"<<x+x+x+x<<"units"<<std::endl;
-	system("Pause");
-	return 0;
-}
-void rectangles()
-{
-    system("cls");
-    std::cout<<"Hello And Welcome."<<std::endl;
-	std::cout<<"What Would You Love To Find"<<std::endl;
-	std::cout<<"1	The Area Of A Rectangle			  "<<std::endl;
-	std::cout<<"2	The Perimeter Of A Rectangle "<<std::endl;
-    system("Pause");
-	int choice;
-	std::cin>>choice;
-	switch(choice)
-	{
-		case 1:	areaofrectangle();
-									break;
-		case 2:  perimeterofrectangle();
-									break;
-		default: std::cout<<"ERROR!"<<std::endl;
-									break;
-	}
-    system("Pause");
-}
-int areaofrectangle()
-{
-     system("cls");
-     double x;
-     double y;
-     std::cout<<"Hello And Welcome."<<std::endl;
-     std::cout<<"Please Enter the Length of the Rectangle"<<std::endl;
-     std::cin>>x;
-     std::cout<<"The length Of The Rectangle Is "<<x<<" Units."<<std::endl;
-     std::cout<<"Please Enter the Width of the Rectangle"<<std::endl;
-     std::cin>>y;
-     std::cout<<"The Widdth Of The Rectangle Is "<<y<<" Units."<<std::endl;
-     std::cout<<"The Area Of The Rectangle Is "<< x*y<<" Units "<<std::endl;
-    system("Pause");
-    return 0;
-}
-int perimeterofrectangle()
-{
-    system("cls");
-     double x;
-     double y;
-     std::cout<<"Hello And Welcome."<<std::endl;
-     std::cout<<"Please Enter the Length of the Rectangle"<<std::endl;
-     std::cin>>x;
-     std::cout<<"The length Of The Rectangle Is "<<x<<" Units."<<std::endl;
-     std::cout<<"Please Enter the Width of the Rectangle"<<std::endl;
-     std::cin>>y;
-     std::cout<<"The Width Of The Rectangle Is "<<y<<" Units."<<std::endl;
-     std::cout<<"The Perimeter Of The Rectangle Is "<< 2*(x+y) <<" Units "<<std::endl;
-    system("Pause");
-    return 0;
-}
-int areaofcircles();
-int circumferenceofcircles();
 
-void circles()
-{
-    system("cls");
-    std::cout<<"Hello And Welcome."<<std::endl;
-    std::cout<<"What Would You Love To Find"<<std::endl;
-    std::cout<<"1   The Area Of A Circle           "<<std::endl;
-    std::cout<<"2   The Circumference Of A Circle  "<<std::endl;
-    system("Pause");
-    int choice;
-    std::cin>>choice;
-    switch(choice)
-    {
-        case 1: areaofcircles();
-                                    break;
-        case 2:  circumferenceofcircles();
-                                    break;
-        default: std::cout<<"ERROR!"<<std::endl;
-                                    break;
-    }
-    system("Pause");
-}
-int areaofcircles()
-{
-    system("cls");
-    double r;
-    std::cout<<"Hello And Welcome."<<std::endl;
-    std::cout<<"Please Enter The Raduis of The Circle."<<std::endl;
-    std::cin>> r;
-    std::cout<<"The Raduis Of The Circle Is: "<<r<<" Units."<<std::endl;
-    std::cout<<"The Area Of The Circle Is "<< (r*r)*pi <<" unists squared."<<std::endl;
+void functions(){
 
-    system("pause");
-    return 0;
-}
-int circumferenceofcircles()
-{
-    system("cls");
-    double r;
-    std::cout<<"Hello And Welcome"<<std::endl;
-    std::cout<<"Please Enter The Raduis of The Circle."<<std::endl;
-    std::cin>> r;
-    std::cout<<"The Raduis Of The Circle Is: "<<r<<" Units."<<std::endl;
-    std::cout<<"And The Diameter Of The Circle Is: "<<2*r<<" Units."<<std::endl;
-    std::cout<<"The Circumference Of The Circle is "<< 2*r*pi<<" Units"<<std::endl;
-    system("pause");
-    return 0;
-}
-void cones()
-{
-    system("cls");
-     std::cout<<"Hello And Welcome."<<std::endl;
-     std::cout<<"What Would You Love To Find"<<std::endl;
-    std::cout<<"1   The Surface Area Of A Cone   "<<std::endl;
-    std::cout<<"2   The Volume Of A Cone         "<<std::endl;
-    system("Pause");
-    int choice;
-    std::cin>>choice;
-    switch(choice)
-    {
-        case 1: areaofcircles();
-                                    break;
-        case 2:  circumferenceofcircles();
-                                    break;
-        default: std::cout<<"ERROR!"<<std::endl;
-                                    break;
-    }
-    system("Pause");
-}
-void pyramid()
-{
-    system("cls");
-     std::cout<<"Hello And Welcome."<<std::endl;
-     std::cout<<"What Would You Love To Find"<<std::endl;
-    std::cout<<"1   The Surface Area Of A Pyramid      "<<std::endl;
-    std::cout<<"2   The Volume Of A Pyramid            "<<std::endl;
-    system("Pause");
-    int choice;
-    std::cin>>choice;
-    switch(choice)
-    {
-        case 1: areaofcircles();
-                                    break;
-        case 2:  circumferenceofcircles();
-                                    break;
-        default: std::cout<<"ERROR!"<<std::endl;
-                                    break;
-    }
-    system("Pause");
 }
